@@ -9,7 +9,7 @@ Categorie.hasMany(Specialite, {
     foreignKey: 'Id_categorie'
 });
 
-//Mais une spécialité peut avoir une seul catégorie
+// Mais une spécialité appartient à une seule catégorie
 
 Specialite.belongsTo(Categorie, {
     foreignKey: 'Id_categorie'
@@ -21,7 +21,7 @@ Specialite.hasMany(Artisan, {
     foreignKey: 'Id_specialite'
 });
 
-//Mais un artisan peut avoir une seul spécialité
+// Mais un artisan appartient à une seule spécialité
 
 Artisan.belongsTo(Specialite, {
     foreignKey: 'Id_specialite'

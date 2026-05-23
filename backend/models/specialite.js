@@ -1,7 +1,7 @@
 const { DataTypes } = require ('sequelize');
 const sequelize = require ('../db');
 
-const Specialite = sequelize.define('specialite', {
+const Specialite = sequelize.define('Specialite', {
 
     Id_specialite: {
         type: DataTypes.INTEGER,
