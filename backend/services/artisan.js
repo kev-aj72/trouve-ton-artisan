@@ -43,9 +43,11 @@ exports.getArtisansByCategorie = async (categorie) => {
         include: [
             {
                 model: Specialite,
+                required: true,
                 include: [
                     {
                         model: Categorie,
+                        required: true,
                         where: {
                             Nom: categorie
                         }
