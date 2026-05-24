@@ -12,9 +12,9 @@ function Menu() {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <div className="navbar-nav">
+                <div className="navbar-nav d-flex flex-row justify-content-around w-100">
                     <Link className="nav-link" to="/">
                         Accueil
                     </Link>
