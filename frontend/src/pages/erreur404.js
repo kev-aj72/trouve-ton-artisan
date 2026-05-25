@@ -1,6 +1,15 @@
 function Erreur404() {
     return(
-        <h1>Erreur404</h1>
+        <main>
+        <div>
+        <h2> Page non trouvée</h2>
+        <p>ERREUR 404</p>
+        <p> La page que vous avez demandé n'existe pas</p>
+        </div>
+        <div>
+            <img src='/images/icon-erreur404.png' alt="icon erreur404 page non trouvée"/>
+        </div>
+        </main>
     );
 }
 
