@@ -7,6 +7,10 @@ const artisan = require ('../controllers/artisan');
 
 router.get('/', artisan.getAllArtisans);
 
+//récuperer les top artisans du mois 
+
+router.get('/top', artisan.getTopArtisans);
+
 //récuperer les artisans
 
 router.get('/categorie/:categorie', artisan.getArtisansByCategorie);
