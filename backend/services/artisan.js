@@ -19,6 +19,28 @@ exports.getAllArtisans = async () => {
     });
 };
 
+//code pour recuperer top du mois 
+
+exports.getTopArtisans = async () => {
+    return await Artisan.findAll({
+        where: {
+            Top: 'VRAI'
+        },
+        include: [
+            {
+                model: Specialite,
+                
+                include: [
+                    {
+                        model: Categorie
+                    }
+                ]
+            }
+        ],
+        limit: 3
+    });
+};
+
 //code pour recuperer un artisan 
 
 exports.getArtisanById = async (id) => {

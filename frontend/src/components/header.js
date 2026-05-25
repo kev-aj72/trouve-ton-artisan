@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Menu from "./menu";
+import Recherche from "./recherche";
 
 function Header() {
     return (
@@ -19,12 +20,7 @@ function Header() {
                 <div className=" col-6 d-flex flex-column align-items-end p-4">
 
                 <div className="w-50 mx-5">
-                    <input
-                        className="form-control"
-                        type="search"
-                        placeholder="Rechercher un artisan"
-                        aria-label="Rechercher un artisan"
-                    />
+                    <Recherche />
                 </div>
 
             

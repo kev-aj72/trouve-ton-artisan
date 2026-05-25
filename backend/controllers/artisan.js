@@ -13,6 +13,18 @@ exports.getAllArtisans = async (req, res) => {
     }
 };
 
+exports.getTopArtisans = async (req, res) => {
+    try {
+        const top = await serviceArtisan.getTopArtisans();
+
+        res.status(200).json(top);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+};
+
 exports.getArtisanById = async (req, res) => {
     try {
         const artisan = await serviceArtisan.getArtisanById(req.params.id);
