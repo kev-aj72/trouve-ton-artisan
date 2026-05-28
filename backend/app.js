@@ -5,7 +5,7 @@ const logger  = require ('morgan');
 
 const artisanRoutes   = require ('./routes/artisan');
 const categorieRoutes = require ('./routes/categorie');
-
+const contactRoutes = require("./routes/contact");
 const app = express();
 
 app.use(cors());
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/artisans', artisanRoutes);
 app.use('/api/categories', categorieRoutes);
+app.use("/api/contact", contactRoutes);
 
 //Route erreur 404
 
