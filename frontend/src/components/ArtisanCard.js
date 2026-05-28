@@ -2,48 +2,56 @@ import { Link } from "react-router-dom";
 
 function ArtisanCard({ artisan }) {
 
-  const note = Math.round(Number(artisan.Note));
-
   return (
-
-    <div className="col-12 col-md-6 col-lg-4 mb-4">
-
+    <div className="col-12 col-md-6 col-xl-4 mt-2" key={artisan.Id_artisan}>
       <Link
         to={`/artisans/${artisan.Id_artisan}`}
-        className="text-decoration-none text-dark"
+        className="text-decoration-none"
       >
-
-        <div className="card h-100 shadow-sm">
-
+        <div className="card h-100 p-3 ">
           <div className="card-body">
 
-            <h2 className="h5 card-title">
-              {artisan.Nom}
-            </h2>
+            <div className="row align-items-center justify-content-between">
 
-            <p className="mb-2">
-              {"★".repeat(note)}
-              {"☆".repeat(5 - note)}
-            </p>
+              <div className="col-6">
+                <p className="card-title">
+                  {artisan.Nom}
+                </p>
 
-            <p className="mb-2">
-              <strong>Spécialité :</strong>{" "}
-              {artisan.Specialite?.Nom}
-            </p>
+                <p className="card-text">
+                  Spécialité : {artisan.Specialite?.Nom}
+                </p>
+              </div>
 
-            <p className="mb-0">
-              <strong>Ville :</strong>{" "}
-              {artisan.Ville}
-            </p>
+              <div className="col-6 text-end">
+                <p className="card-text">
+                  {[1, 2, 3, 4, 5].map((star) => {
+  if (artisan.Note >= star) {
+    return <i key={star} className="bi bi-star-fill"></i>;
+  }
+
+  if (artisan.Note >= star - 0.5) {
+    return <i key={star} className="bi bi-star-half"></i>;
+  }
+
+  return <i key={star} className="bi bi-star"></i>;
+})}
+
+{" "}
+{artisan.Note}
+                </p>
+
+                <p className="card-text">
+                  Ville : {artisan.Ville}
+                </p>
+              </div>
+
+            </div>
 
           </div>
-
         </div>
-
       </Link>
-
     </div>
-
   );
 }
 
