@@ -1,0 +1,22 @@
+.menu-link:hover {
+    color: $primary-color;
+    font-weight: 700;
+}
+
+.accueil-link:hover {
+  color: $danger-color;
+  font-weight: 700;
+}
+
+.form-recherche {
+  border: none;
+  border-bottom: 2px solid $primary-color;
+  border-right: 2px solid $primary-color;
+  border-radius: 0;
+
+  &:focus {
+    box-shadow: none;
+    border-bottom: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+  }
+}

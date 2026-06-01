@@ -1,0 +1,55 @@
+.artisan-detail-label {
+  color: $secondary-color;
+  font-weight: 700;
+}
+
+.note-artisan {
+  color: $primary-color;
+  font-weight: 600;
+}
+
+.a-propos-text {
+  color: $primary-color;
+}
+
+.artisan-link {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.form-artisan-label {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.form-artisan {
+  background-color: $text-light;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+
+  &:focus {
+    background-color: $text-light;
+    border-color: $primary-color;
+    box-shadow: 0 0 8px rgba(0, 116, 199, 0.25);
+  }
+}
+
+.btn-submit {
+  background-color: $accent-color;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}

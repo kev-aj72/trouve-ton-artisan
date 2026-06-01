@@ -1,0 +1,70 @@
+@import "./variables.scss";
+@import "./home.scss";
+@import "./detailsArtisan.scss";
+@import "./erreur404.scss";
+@import "./artisanCard.scss";
+@import "./header.scss";
+@import "./footer.scss";
+
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../assets/fonts/Graphik-Regular-Trial.otf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("../assets/fonts/Graphik-Bold-Trial.otf") format("truetype");
+  font-weight: 700;
+}
+
+
+*{
+    color: $text-color;
+     font-family: $font-family;
+}
+
+h1{
+  font-size: $font-size-h1;
+  color: $secondary-color;
+  font-weight: 700;
+  width: fit-content;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: $danger-color;
+  }
+}
+
+h2{
+    font-size: $font-size-h2;
+  color: $secondary-color;
+  font-weight: 700;
+  
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: $accent-color;
+  }
+}
+
+h3{
+  font-size: $font-size-h2;
+  color: $secondary-color;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: $danger-color;
+  }
+}
