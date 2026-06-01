@@ -16,7 +16,7 @@ function Top() {
       {artisans.map((artisan) => (
         <div className="col-12 col-md-6 col-xl-4" key={artisan.Id_artisan}>
           <Link to={`/artisans/${artisan.Id_artisan}`} className="text-decoration-none">
-            <div className="card h-100 p-3">
+            <div className="card artisan-card h-100 p-3">
               <div className="card-body">
                 <div className="row align-items-center justify-content-between">
                   <div className="col-6">

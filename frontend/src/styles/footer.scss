@@ -1,0 +1,19 @@
+footer {
+  background-color: $primary-color;
+
+    a {
+        color: white;
+        text-decoration: none;
+            &:hover {
+                color: white;
+                text-shadow:
+                        0 0 5px white,
+                        0 0 10px white;
+            }
+    }
+
+    p {
+        color: white;
+        
+    }
+}

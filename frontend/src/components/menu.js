@@ -34,20 +34,20 @@ function Menu() {
           id="menuArtisan"
         >
 
-          <div className="col-12 col-xl-6 mb-3">
+          <div className="col-12 col-xl-4 mb-3 mx-5">
             <Recherche />
           </div>
 
           <div className="navbar-nav flex-column flex-xl-row justify-content-between w-100">
 
-            <Link className="nav-link" to="/">
+            <Link className="nav-link  accueil-link" to="/">
               Accueil
             </Link>
 
             {categories.map((c) => (
               <Link
                 key={c.Id_categorie}
-                className="nav-link"
+                className="nav-link menu-link"
                 to={`/categorie/${c.Nom}`}
               >
                 {c.Nom}

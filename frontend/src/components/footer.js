@@ -15,19 +15,19 @@ function Footer() {
       </div>
 
       <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-around align-items-center gap-3 w-100 p-3">
-        <Link className="nav-link" to="/mentions-legales">
+        <Link className="nav" to="/mentions-legales">
           mentions légales
         </Link>
 
-        <Link className="nav-link" to="/donnees-personnelles">
+        <Link className="nav" to="/donnees-personnelles">
           données personnelles
         </Link>
 
-        <Link className="nav-link" to="/accessibilite">
+        <Link className="nav" to="/accessibilite">
           accessibilité
         </Link>
 
-        <Link className="nav-link" to="/cookies">
+        <Link className="nav" to="/cookies">
           cookies
         </Link>
       </div>

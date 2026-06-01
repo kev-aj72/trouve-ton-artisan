@@ -27,7 +27,7 @@ function Recherche() {
     return (
     <div className="dropdown w-100">
         <input
-            className="form-control"
+            className="form-control form-recherche"
             type="search"
             placeholder="Rechercher un artisan"
             value={search}

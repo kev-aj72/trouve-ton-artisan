@@ -1,0 +1,17 @@
+.artisan-card {
+  min-height: 140px;
+  background-color: $text-light;
+  border: 2px solid $primary-color;
+  border-radius: 15px;
+  
+  .artisan-card .card-body {
+   height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+  &:hover {
+    box-shadow: 0 8px 20px $secondary-color;
+    transform: translateY(-5px);
+  }
+}

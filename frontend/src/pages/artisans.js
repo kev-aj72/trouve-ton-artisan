@@ -50,9 +50,9 @@ function ListeArtisans() {
 
     <main className="container py-5">
 
-      <h1 className="mb-4">
+      <h2 className="mb-4">
         Liste des artisans
-      </h1>
+      </h2>
 
       <div className="row">
 
