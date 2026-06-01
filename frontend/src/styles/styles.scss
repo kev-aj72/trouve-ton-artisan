@@ -6,7 +6,6 @@
 @import "./header.scss";
 @import "./footer.scss";
 
-
 @font-face {
   font-family: "Graphik";
   src: url("../assets/fonts/Graphik-Regular-Trial.otf") format("truetype");
@@ -18,6 +17,9 @@
   src: url("../assets/fonts/Graphik-Bold-Trial.otf") format("truetype");
   font-weight: 700;
 }
+
+
+//scss de base commun a toute les pages 
 
 
 *{

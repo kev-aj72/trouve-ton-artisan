@@ -1,3 +1,5 @@
+//liens menu 
+
 .menu-link:hover {
     color: $primary-color;
     font-weight: 700;
@@ -7,6 +9,8 @@
   color: $danger-color;
   font-weight: 700;
 }
+
+//barre de recherche
 
 .form-recherche {
   border: none;
@@ -20,3 +24,26 @@
     border-right: 2px solid $primary-color;
   }
 }
+
+// modification du texte de la barre de recherche version mobile tablette
+
+.recherche-menu {
+  width: 260px;
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .recherche-menu {
+    width: 220px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .recherche-menu {
+    width: 190px;
+  }
+}
+
+

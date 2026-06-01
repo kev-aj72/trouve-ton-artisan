@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+ // pour la création des top du mois 
+
 function Top() {
   const [artisans, setArtisans] = useState([]);
 
@@ -23,23 +26,24 @@ function Top() {
                     <p className="card-title">{artisan.Nom}</p>
                     <p className="card-text">Spécialité : {artisan.Specialite.Nom}</p>
                   </div>
+                  
                   <div className="col-6 text-end">
                     <p className="card-text">
-  {[1, 2, 3, 4, 5].map((star) => {
-    if (artisan.Note >= star) {
-      return <i key={star} className="bi bi-star-fill"></i>;
-    }
+                      {[1, 2, 3, 4, 5].map((star) => {
+                                    if (artisan.Note >= star) {
+                                    return <i key={star} className="bi bi-star-fill"></i>;
+                                  }
 
-    if (artisan.Note >= star - 0.5) {
-      return <i key={star} className="bi bi-star-half"></i>;
-    }
+                                    if (artisan.Note >= star - 0.5) {
+                                    return <i key={star} className="bi bi-star-half"></i>;
+                                  }
 
-    return <i key={star} className="bi bi-star"></i>;
-  })}
+                                    return <i key={star} className="bi bi-star"></i>;
+                                  })}
 
-  {" "}
-  {artisan.Note}
-</p>
+                                  {" "}
+                                {artisan.Note}
+                    </p>
                     
                     <p className="card-text">Ville : {artisan.Ville}</p>
                   </div>

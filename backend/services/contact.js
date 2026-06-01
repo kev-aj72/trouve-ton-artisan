@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 
+// code pour Envoyer un email de contact à l'artisan sélectionné
 exports.sendContactMail = async (emailArtisan, nom, email, objet, message) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -14,14 +15,8 @@ exports.sendContactMail = async (emailArtisan, nom, email, objet, message) => {
     to: emailArtisan,
     replyTo: email,
     subject: objet,
-    text: `
-Nouveau message depuis Trouve Ton Artisan
-
-Nom : ${nom}
-Email : ${email}
-
-Message :
-${message}
-    `,
+    text: `Nom : ${nom}
+          Email : ${email}
+          Message : ${message} `,
   });
 };

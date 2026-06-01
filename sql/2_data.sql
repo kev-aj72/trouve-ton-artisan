@@ -22,7 +22,7 @@ INSERT INTO `categorie` (`Id_categorie`, `Nom`) VALUES
 
 
 --
--- Insertion des données de la table `specialites`
+--  Insertion des données de la table `specialites`
 --
 
 INSERT INTO `specialites` (`Id_specialite`, `Nom`, `Id_categorie`) VALUES
