@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Menu from "./menu";
 
+ // composant pour la création est la reutilisation du header
+
 function Header() {
   return (
     <header className="container-fluid">
@@ -9,11 +11,7 @@ function Header() {
 
         <div className="col-8 col-lg-6">
           <Link to="/">
-            <img
-              src="/images/Logo.png"
-              alt="Logo trouve ton artisan"
-              className="img-fluid"
-            />
+            <img src="/images/Logo.png" alt="Logo trouve ton artisan" className="img-fluid" />
           </Link>
         </div>
 

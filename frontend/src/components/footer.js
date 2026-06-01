@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+ // composant pour la création est la reutilisation du footer
+
 function Footer() {
   return (
     <footer className="w-100 mt-5">
@@ -15,21 +17,10 @@ function Footer() {
       </div>
 
       <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-around align-items-center gap-3 w-100 p-3">
-        <Link className="nav" to="/mentions-legales">
-          mentions légales
-        </Link>
-
-        <Link className="nav" to="/donnees-personnelles">
-          données personnelles
-        </Link>
-
-        <Link className="nav" to="/accessibilite">
-          accessibilité
-        </Link>
-
-        <Link className="nav" to="/cookies">
-          cookies
-        </Link>
+        <Link className="nav" to="/mentions-legales"> Mentions légales </Link>
+        <Link className="nav" to="/donnees-personnelles">Données personnelles </Link>
+        <Link className="nav" to="/accessibilite">Accessibilité </Link>
+        <Link className="nav" to="/cookies">Cookies </Link>
       </div>
     </footer>
   );

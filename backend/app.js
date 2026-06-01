@@ -31,9 +31,7 @@ app.use("/api/contact", contactRoutes);
 //Route erreur 404
 
 app.use((req, res) => {
-    res.status(404).json({
-        message: 'route inconnue'
-    });
+    res.status(404).json({message: 'route inconnue'});
 });
 
 module.exports = app;

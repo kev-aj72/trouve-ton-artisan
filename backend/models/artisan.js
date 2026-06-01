@@ -1,6 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../db');
 
+// Modèle représentant un artisan
+
 const Artisan = sequelize.define('Artisan', {
 
     Id_artisan: {

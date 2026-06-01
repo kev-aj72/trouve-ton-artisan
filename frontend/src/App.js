@@ -7,6 +7,8 @@ import Construction from './pages/construction';
 import Footer from './components/footer';
 import Header from './components/header';
 
+// Définition des routes de l'application 
+
 function App() {
   return (
       <BrowserRouter>

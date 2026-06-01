@@ -15,7 +15,7 @@ CREATE DATABASE trouve_ton_artisan
     
 -- -----------------------------------------------------------------------------
 --
--- Sélection base de données
+--  Sélection base de données
 --
     USE trouve_ton_artisan;
 
