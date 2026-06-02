@@ -13,7 +13,7 @@ function Details() {
 
     // Récupère les informations de l'artisan sélectionné
   useEffect(() => {
-    fetch(`http://localhost:3080/api/artisans/${id}`)
+    fetch(`http://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setArtisan(data);
