@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 
@@ -46,18 +47,22 @@ function ListeArtisans() {
   }, [categorie, recherche]);
 
   return (
+    <>
+      <Helmet>
+        <title>Liste des artisans - Trouve ton artisan</title>
+        <meta name="description" content="Consultez la liste des artisans disponibles et trouvez le professionnel adapté à vos besoins."/>
+      </Helmet>
+        <main className="container py-5">
+        
+          <h2 className="mb-4">Liste des artisans</h2>
+            <div className="row">
+              {artisans.map((artisan) => (
+              <ArtisanCard key={artisan.Id_artisan} artisan={artisan}/>
+            ))}
+            </div>
 
-    <main className="container py-5">
-
-      <h2 className="mb-4">Liste des artisans</h2>
-        <div className="row">
-        {artisans.map((artisan) => (
-          <ArtisanCard key={artisan.Id_artisan} artisan={artisan}/>
-        ))}
-      </div>
-
-    </main>
-
+        </main>
+    </>
   );
 }
 

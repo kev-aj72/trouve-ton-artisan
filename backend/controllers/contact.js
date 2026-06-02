@@ -11,7 +11,7 @@ exports.sendMail = async (req, res) => {
   }
 
   try {
-    await contactService.sendContactMail(emailArtisan, nom, email, objet, message);
+    await contactService.sendMail(emailArtisan, nom, email, objet, message);
 
     res.status(200).json({ message: "Email envoyé avec succès", });
   } catch (error) {

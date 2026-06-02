@@ -1,7 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import Top from "../components/top";
 
 function Home() {
     return(
+      <>
+      <Helmet>
+        <title>Trouve ton artisan - Accueil</title>
+        <meta name="description" content="Trouvez facilement un artisan qualifié près de chez vous dans les domaines du bâtiment, de l'alimentation, des services et de la fabrication."/>
+      </Helmet>
 
     <main>
       {/* Section de présentation du fonctionnement du site */}
@@ -50,6 +56,7 @@ function Home() {
         </section>
 
     </main>
+    </>
   );
 }
 
