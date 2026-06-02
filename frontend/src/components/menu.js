@@ -9,7 +9,7 @@ function Menu() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3080/api/categories")
+    fetch("http://trouve-ton-artisan-api-1g3f.onrender.com/api/categories")
       .then((response) => response.json())
       .then((data) => setCategories(data))
       .catch((error) => console.error(error));

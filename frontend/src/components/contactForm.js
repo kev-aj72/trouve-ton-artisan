@@ -23,7 +23,7 @@ function ContactForm({ artisan }) {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3080/api/contact", {
+    const res = await fetch("http://trouve-ton-artisan-api-1g3f.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
