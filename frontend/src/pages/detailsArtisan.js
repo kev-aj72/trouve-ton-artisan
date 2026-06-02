@@ -1,5 +1,7 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ContactForm from "../components/contactForm";
 
 function Details() {
   // Récupère l'identifiant de l'artisan dans l'URL
@@ -8,13 +10,6 @@ function Details() {
   // Stocke les informations de l'artisan
   const [artisan, setArtisan] = useState(null);
 
-  // Stocke les données du formulaire de contact
-  const [formData, setFormData] = useState({
-    nom: "",
-    email: "",
-    objet: "",
-    message: "",
-  });
 
     // Récupère les informations de l'artisan sélectionné
   useEffect(() => {
@@ -28,26 +23,6 @@ function Details() {
       });
   }, [id]);
 
-    // Met à jour les champs du formulaire
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-  // Gère l'envoi du formulaire de contact
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    alert("Votre message a bien été envoyé.");
-
-    setFormData({
-      nom: "",
-      email: "",
-      objet: "",
-      message: "",
-    });
-  };
 
   if (!artisan) {
     return (
@@ -58,7 +33,13 @@ function Details() {
   }
 
   return (
-
+    <>
+      <Helmet>
+        <title>fiche détaillée artisan- Trouve ton artisan</title>
+        <meta name="description" content="Consultez la fiche détaillée d'un artisan qualifié sur Trouve ton artisan."/>
+      </Helmet>
+    
+    
     <main className="container">
       {/* Informations détaillées de l'artisan */}
       <section className="row  mb-5">
@@ -112,54 +93,10 @@ function Details() {
       <section>
         {/* Formulaire de contact */}
           <h2 className="text-start fw-bold mb-4">Contactez l’artisan :</h2>
-
-            <div className="row justify-content-center">
-              <div className="col-12 col-md-8 col-lg-8">
-                <form onSubmit={handleSubmit}>
-                  <div className="row align-items-center mb-3">
-                    <label htmlFor="nom" className="col-12 col-md-2 form-label form-artisan-label mb-0">Nom:</label>
-
-                      <div className="col-12 col-md-10">
-                        <input type="text" id="nom" name="nom" className="form-control form-artisan" value={formData.nom}
-                                onChange={handleChange} required />
-                      </div>
-                  </div>
-
-                  <div className="row align-items-center mb-3">
-                    <label htmlFor="email" className="col-12 col-md-2 form-label form-artisan-label mb-0">Email:</label>
-
-                    <div className="col-12 col-md-10">
-                      <input type="email" id="email" name="email" className="form-control form-artisan" value={formData.email} 
-                              onChange={handleChange} required/>
-                    </div>
-                  </div>
-
-                  <div className="row align-items-center mb-3">
-                    <label htmlFor="objet" className="col-12 col-md-2 form-label form-artisan-label mb-0">Objet:</label>
-
-                    <div className="col-12 col-md-10">
-                      <input type="text" id="objet" name="objet"className="form-control form-artisan" value={formData.objet}
-                              onChange={handleChange} required/>
-                    </div>
-                  </div>
-
-                  <div className="row mb-4">
-                    <label htmlFor="message" className="col-12 col-md-2 form-label form-artisan-label">Message:</label>
-
-                    <div className="col-12 col-md-10">
-                      <textarea id="message" name="message" rows="5" className="form-control form-artisan" value={formData.message}
-                                onChange={handleChange}required/>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <button type="submit" className="btn-submit">Contactez</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <ContactForm artisan={artisan} />
       </section>
     </main>
+    </>
   );
 }
 

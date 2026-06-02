@@ -1,7 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 //page erreur 404
 
 function Erreur404() {
   return (
+
+    <>
+      <Helmet>
+        <title>Page non trouvée - Trouve ton artisan</title>
+        <meta name="description" content="La page que vous recherchez n'existe pas"/>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      
     <main>
       <div className="container-fluid px-5">
         <h3>Page non trouvée</h3>
@@ -24,6 +34,7 @@ function Erreur404() {
         />
       </div></div>
     </main>
+    </>
   );
 }
 
