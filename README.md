@@ -21,6 +21,7 @@ Les logiciels suivants doivent être installés sur votre machine :
 * npm
 * MySQL
 * Git
+---
 
 ## Technologies utilisées
 
@@ -48,6 +49,32 @@ Les logiciels suivants doivent être installés sur votre machine :
 * GitHub
 * Visual Studio Code
 * Figma
+
+---
+
+## Déploiement
+
+Le projet est déployé en ligne avec :
+
+- Frontend : Render Static Site
+- Backend : Render Web Service
+- Base de données : MySQL sur Railway
+
+### URLs de production
+
+Frontend :
+
+https://trouve-ton-artisan-k2d5.onrender.com
+
+Backend :
+
+https://trouve-ton-artisan-api-1g3f.onrender.com
+
+Exemples de routes API :
+
+https://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans
+
+https://trouve-ton-artisan-api-1g3f.onrender.com/api/categories
 
 ---
 
@@ -97,12 +124,29 @@ http://localhost:3080
 
 ### 4. Base de données
 
-Créer la base de données MySQL en exécutant :
+Deux Duo de scripts SQL sont fournis dans le projet :
 
-- le script de création de la base de données ;
-- le script d'alimentation des données.
+#### Environnement local
+
+Pour une installation locale avec MySQL :
+
+1. Exécuter le script `1-structure-local.sql`
+2. Exécuter le script `2-data-local.sql`
+
+Ces scripts créent automatiquement la base de données puis insèrent les données nécessaires au fonctionnement de l'application.
+
+#### Environnement de production
+
+Pour un déploiement sur Railway :
+
+1. Exécuter le script `1-structure-production.sql`
+2. Exécuter le script `2-data-production.sql`
+
+Ces scripts ne contiennent pas les instructions de création de base de données, car celle-ci est gérée directement par Railway.
 
 Une fois ces étapes réalisées, l'application est prête à être utilisée.
+
+---
 
 ## Fonctionnalités
 

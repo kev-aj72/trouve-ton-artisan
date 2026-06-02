@@ -17,11 +17,11 @@ function ListeArtisans() {
   useEffect(() => {
 
     // URL par défaut : tous les artisans
-    let url = "http://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans";
+    let url = "https://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans";
 
     // Filtre les artisans par catégorie si une catégorie est sélectionnée
     if (categorie) {
-      url = `http://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans/categorie/${categorie}`;
+      url = `https://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans/categorie/${categorie}`;
     }
 
     fetch(url)

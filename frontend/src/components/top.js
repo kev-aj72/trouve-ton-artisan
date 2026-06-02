@@ -8,7 +8,7 @@ function Top() {
   const [artisans, setArtisans] = useState([]);
 
   useEffect(() => {
-    fetch("http://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans/top")
+    fetch("https://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans/top")
       .then((response) => response.json())
       .then((data) => setArtisans(data))
       .catch((error) => console.error(error));
