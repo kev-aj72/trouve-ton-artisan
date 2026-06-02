@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 3080;
 async function startServer() {
     try {
         await sequelize.authenticate();
-        console.log('MySQL Connecter');
+        console.log('MySQL Connecté');
 
         app.listen(PORT, () => { 
-            console.log(`Serveur lancé sur http://localhost:${PORT}`);    
+            console.log(`Serveur lancé sur le port ${PORT}`);    
     });
         
     } catch (error) {
