@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 
 import ArtisanCard from "../components/ArtisanCard";
+import Erreur404 from "./erreur404";
 
 function ListeArtisans() {
 
@@ -45,6 +46,10 @@ function ListeArtisans() {
       });
 
   }, [categorie, recherche]);
+
+   if (categorie && artisans.length === 0) {
+    return <Erreur404 />;
+  }
 
   return (
     <>
