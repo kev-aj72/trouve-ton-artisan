@@ -15,7 +15,7 @@ function Recherche() {
             return;
         }
 
-        fetch("http://localhost:3080/api/artisans")
+        fetch("https://trouve-ton-artisan-api-1g3f.onrender.com/api/artisans")
             .then((response) => response.json())
             .then((data) => {
                 const filter = data.filter((artisan) =>
