@@ -2,13 +2,6 @@
 -- PROJET TROUVE TON ARTISAN - SCRIPT DE CREATION STRUCTURE
 -- -----------------------------------------------------------------------------
 
--- 
--- Sélection base de données
---
-
- USE trouve_ton_artisan;
-
-
 
 --
 -- Insertion des données de la table `categorie`

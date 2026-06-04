@@ -2,6 +2,11 @@
 -- PROJET TROUVE TON ARTISAN - SCRIPT DE CREATION DONNEE POUR PRODUCTION SCRIPT UTILISEE POUR RAILWAY
 -- ----------------------------------------------------------------------------------------------------
 
+-- 
+-- Sélection base de données
+--
+
+ USE trouve_ton_artisan;
 
 
 --
