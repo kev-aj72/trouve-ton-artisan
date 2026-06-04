@@ -58,8 +58,7 @@ Le projet est déployé en ligne avec :
 
 - Frontend : Render Static Site
 - Backend : Render Web Service
-- Base de données : MySQL sur Railway
-
+- Base de données : MySQL sur freesqldatabase
 ### URLs de production
 
 Frontend :
@@ -137,12 +136,12 @@ Ces scripts créent automatiquement la base de données puis insèrent les donn�
 
 #### Environnement de production
 
-Pour un déploiement sur Railway :
+Pour un déploiement sur freesqldatabase :
 
 1. Exécuter le script `1-structure-production.sql`
 2. Exécuter le script `2-data-production.sql`
 
-Ces scripts ne contiennent pas les instructions de création de base de données, car celle-ci est gérée directement par Railway.
+Ces scripts ne contiennent pas les instructions de création de base de données, car celle-ci est gérée directement par freesqldatabase.
 
 Une fois ces étapes réalisées, l'application est prête à être utilisée.
 
